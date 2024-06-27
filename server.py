@@ -34,7 +34,7 @@ def write_to_file(data):
         file = database.write(f'\n{email},{subject},{message}')
 
 def write_to_csv(data):
-    with open('venv/database.csv', newline='', mode='a') as database2:
+    with open('venv/database.csv', newline='', mode='a',encoding="utf8") as database2:
         email = data["email"]
         subject = data["subject"]
         message = data["message"]
